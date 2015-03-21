@@ -1,17 +1,47 @@
 package com.example.bofashola.pronghornweather;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class ZipCodeActivity extends ActionBarActivity {
-
+    Button fetchReport;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.zipcode_main);
+        addListenerOnButton();
 	}
+
+    public void addListenerOnButton() {
+        fetchReport = (Button) findViewById(R.id.buttonZipCode);
+
+        fetchReport.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // get value from the EditText
+                EditText text = (EditText) findViewById(R.id.editTextZipCode);
+                String textValue = text.getText().toString().trim();
+                if (textValue == null || textValue.equals(""))
+                    Toast.makeText(ZipCodeActivity.this, "Input A Value",
+                            Toast.LENGTH_SHORT).show();
+                else {
+                    Intent i = new Intent(
+                            "com.example.bofashola.pronghornweather.DisplayWeatherActivity");
+                    i.putExtra("location", textValue);
+                    startActivity(i);
+                }
+            }
+        });
+
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

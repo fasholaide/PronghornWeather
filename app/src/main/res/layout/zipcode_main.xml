@@ -48,7 +48,8 @@
             android:gravity="center"
             android:text="@string/getWeatherReport"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            />
     </RelativeLayout>
 
 </ScrollView>

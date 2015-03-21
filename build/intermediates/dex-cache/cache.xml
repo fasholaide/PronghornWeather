@@ -2,39 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
+        jar="/Users/user/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
-        <dex dex="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-ed1d66ca7da8667899783cba12fd6d593577c209.jar" />
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-0875ba31bf65896c3bf18947dd9abb4f46ae8552.jar" />
     </item>
     <item
-        jar="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="/Users/user/Desktop/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-106daa7dd581bf7b7e6dfc0dca2a718094fb1e5b.jar" />
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-f691f37d5e4445c4d22fc436cf8071bb0e8ca877.jar" />
     </item>
     <item
-        jar="/home/bofashola/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="/Users/user/Desktop/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-6c8e2fa9659e73083d585aa8c681b9ccd1ff6ac7.jar" />
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-483e0eed267401d6b56b439c481f72d53b943837.jar" />
     </item>
     <item
-        jar="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/Users/user/Desktop/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-dbbf91693fb1c45d916450d9393cde27057997b5.jar" />
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-50f2fc818d685a79e088bd78b71b92ade5db564d.jar" />
     </item>
     <item
-        jar="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jar="/Users/user/Desktop/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/bofashola/AndroidStudioProjects/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-2303f4445f4ccf26c136ba69f41cdedf4d2aaaca.jar" />
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-4c08890df1c26f13ced3fb752835bf6b70b2f02e.jar" />
+    </item>
+    <item
+        jar="/Users/user/Desktop/PronghornWeather/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-a372c13ceb92ce0e5125eac22d2316f7a5207f14.jar" />
+    </item>
+    <item
+        jar="/Users/user/Desktop/PronghornWeather/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.11/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6">
+        <dex dex="/Users/user/Desktop/PronghornWeather/app/build/intermediates/pre-dexed/debug/classes-f2cdcd1c4b51018c2abc9d65f5364bed2fca5255.jar" />
     </item>
 
 </items>

@@ -21,6 +21,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -30,11 +32,11 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import com.google.android.gms.internal.lg;
+
 
 public class DisplayWeatherActivity extends ActionBarActivity {
 
-	String API_KEY = "ab60ff3efbafc284a001d0d084c6cf8d984be62d";
+	String API_KEY = "04a47cf327719eb89d52bf5addf2d";
 	String LOCATION = "";
 	URL url;
 	String line = "";
@@ -43,23 +45,36 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_weather);
-		new LoadUI().execute(url);
+        LOCATION = getIntent().getStringExtra("location");
+        try {
+            url = new URL(
+                    "http://api.worldweatheronline.com/free/v2/weather.ashx?q="
+                            + LOCATION
+                            + "&format=xml&num_of_days=5&includelocation=yes&key="
+                            + API_KEY);
+        } catch (MalformedURLException e) {
+            // TODO Auto-generated catch block
+            Log.d(LocationUtils.APPTAG, e.getMessage());
+        }
+
 	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-		LOCATION = getIntent().getStringExtra("location");
+        new LoadUI().execute(url);
+        Log.d("DisplayWeather", "I go to the Start Method");
+		/*LOCATION = getIntent().getStringExtra("location");
 		try {
 			url = new URL(
-					"http://api.worldweatheronline.com/free/v1/weather.ashx?q="
+					"http://api.worldweatheronline.com/free/v2/weather.ashx?q="
 							+ LOCATION
 							+ "&format=xml&num_of_days=5&includelocation=yes&key="
 							+ API_KEY);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			Log.d(LocationUtils.APPTAG, e.getMessage());
-		}
+		}*/
 	}
 
 	@Override
@@ -106,10 +121,13 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 		protected WeatherValues doInBackground(URL... urls) {
 
 			WeatherValues values = new WeatherValues();
+
 			
 			try {
+                Log.d("DisplayWeather", "The URL is " + url);
 				HttpURLConnection con = (HttpURLConnection) url
 						.openConnection();
+
 				DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory
 						.newInstance();
 				DocumentBuilder docBuilder = docBuilderFactory
@@ -165,6 +183,8 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 
 				NodeList weathers = doc.getElementsByTagName("weather");
 				for (int i = 0; i < weathers.getLength(); i++) {
+                    System.out.print("This is the number" + i);
+                    Log.d("Tag", "This is the number" + i);
 					Node weat = weathers.item(i);
 					if (weat.getNodeType() == Node.ELEMENT_NODE) {
 						// Getting Date
@@ -179,17 +199,18 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 						// Getting Hi Temp in C
 						Element tempMaxCElement = (Element) weat;
 						NodeList tempMaxCList = tempMaxCElement
-								.getElementsByTagName("tempMaxC");
+								.getElementsByTagName("maxtempC");
 						Element tempMaxCEElement = (Element) tempMaxCList
 								.item(0);
 						NodeList tempMaxCFNList = tempMaxCEElement
 								.getChildNodes();
 						tempMaxCCList.add(((Node) tempMaxCFNList.item(0))
 								.getNodeValue().trim());
+
 						// Getting Hi Temp in F
 						Element tempMaxFElement = (Element) weat;
 						NodeList tempMaxFList = tempMaxFElement
-								.getElementsByTagName("tempMaxF");
+								.getElementsByTagName("maxtempF");
 						Element tempMaxFEElement = (Element) tempMaxFList
 								.item(0);
 						NodeList tempMaxFFNList = tempMaxFEElement
@@ -200,7 +221,7 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 						//Getting Weather Descriptions
 						Element tempMinCElement = (Element) weat;
 						NodeList tempMinCList = tempMinCElement
-								.getElementsByTagName("tempMinC");
+								.getElementsByTagName("mintempC");
 						Element tempMinCEElement = (Element) tempMinCList
 								.item(0);
 						NodeList tempMinCFNList = tempMinCEElement
@@ -222,7 +243,7 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 						// Getting Hi Temp in F
 						Element tempMinFElement = (Element) weat;
 						NodeList tempMinFList = tempMinFElement
-								.getElementsByTagName("tempMinF");
+								.getElementsByTagName("mintempF");
 						Element tempMinFEElement = (Element) tempMinFList
 								.item(0);
 						NodeList tempMinFFNList = tempMinFEElement
@@ -233,7 +254,7 @@ public class DisplayWeatherActivity extends ActionBarActivity {
 						// Getting Humidity
 						Element humidityElement = (Element) weat;
 						NodeList humidityList = humidityElement
-								.getElementsByTagName("tempMinF");
+								.getElementsByTagName("mintempF");
 						Element humidityEElement = (Element) humidityList
 								.item(0);
 						NodeList humidityFNList = humidityEElement

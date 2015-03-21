@@ -33,7 +33,7 @@
             android:textColor="#C2D6DD"
             android:textSize="30sp" />
 
-        <AutoCompleteTextView
+        <EditText
             android:id="@+id/autoCompleteTextViewPlaceName"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
