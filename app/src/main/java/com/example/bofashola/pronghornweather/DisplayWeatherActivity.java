@@ -36,7 +36,8 @@ import org.xml.sax.SAXParseException;
 
 public class DisplayWeatherActivity extends ActionBarActivity {
 
-	String API_KEY = "04a47cf327719eb89d52bf5addf2d";
+	String API_KEY = "THIS IS WHERE YOU PLUG IN THE WEATHER API KEY";
+	//YOU CAN REGISTER FOR THE API HERE: https://developer.worldweatheronline.com/auth/register
 	String LOCATION = "";
 	URL url;
 	String line = "";
