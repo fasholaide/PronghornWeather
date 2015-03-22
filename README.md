@@ -1,2 +1,2 @@
 # PronghornWeather
-The Presentation can be found here: https://prezi.com/xcokou9awwue/edit/#2_13696309
+The Presentation can be found here: http://prezi.com/xcokou9awwue/?utm_campaign=share&utm_medium=copy&rc=ex0share
